@@ -37,7 +37,7 @@ export function Footer() {
             <div className="flex items-center gap-2 pt-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-[var(--badge-bg)] text-[var(--badge-text)] border border-[var(--badge-border)]">
                 <School className="w-3.5 h-3.5" />
-                {PROJECT_INFO.institution}
+                {PROJECT_INFO.department} • {PROJECT_INFO.institution}
               </span>
             </div>
           </div>

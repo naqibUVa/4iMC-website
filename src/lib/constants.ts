@@ -19,6 +19,7 @@ export const PROJECT_INFO = {
   tagline: "High-Dimensional Spatial Biology & Optimal Transport for Chromosome Organization",
   description:
     "This project investigates how chromosome passenger complex (CPC) signaling and chromosome condensation are coordinated during mitosis using high-dimensional multiplex imaging. We develop optimal transport-based methods to quantify, visualize, and compare chromosome-scale variation across cell lines, enabling the study of how chromosome geometry influences protein localization and chromosomal organization.",
+  department: "Department of Electrical and Computer Engineering",
   institution: "University of Virginia",
   institutionUrl: "https://www.virginia.edu",
   githubUrl: "https://github.com/naqibUVa/4iMC-website",

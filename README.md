@@ -43,7 +43,7 @@ The website features an interactive theme switcher persisted in `localStorage`:
 
 ## 🧭 Site Architecture & Navigation
 
-- **Home (`/`)**: Hero section with interactive chromosome canvas, research highlights, keywords ontology, technology toolchain, animated metrics, and publication citations.
+- **Home (`/`)**: Hero section with interactive chromosome canvas, research highlights, keywords ontology, technology toolchain, and animated metrics.
 - **Code (`/code`)**: Repositories, LOT solvers, registration workflows, and test suites.
 - **Data (`/data`)**: Curated OME-TIFF stacks, segmented chromosome spreads, and transport distance matrices.
 - **Tools (`/tools`)**: Napari plugins, QuPath batch classification scripts, and PyTransKit tools.
@@ -113,23 +113,8 @@ This repository includes an automated GitHub Actions deployment workflow located
 
 ---
 
-## 📄 Citation
-
-```bibtex
-@article{pathan2026_4imc,
-  title   = {Iterative Indirect Immunofluorescence Imaging (4i) of Mitotic Chromosomes: Quantitative Morphometry and Optimal Transport Modeling},
-  author  = {Pathan, Naqib Sad and Collaborators},
-  journal = {In Preparation},
-  year    = {2026},
-  institution = {University of Virginia},
-  url     = {https://naqibUVa.github.io/4iMC-website/}
-}
-```
-
----
-
 ## 🏛️ Affiliation & Contact
 
-- **Institution**: Department of Biomedical Engineering, University of Virginia
+- **Institution**: Department of Electrical and Computer Engineering, University of Virginia
 - **Contact**: `qpb3vt@virginia.edu`
 - **GitHub**: [@naqibUVa](https://github.com/naqibUVa)

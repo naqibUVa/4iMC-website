@@ -24,8 +24,6 @@ import {
   Terminal,
   Cpu,
   BookOpen,
-  Copy,
-  Check,
   ExternalLink,
   Sparkles,
   Microscope,
@@ -36,23 +34,7 @@ import {
 } from "lucide-react";
 
 export default function HomePage() {
-  const [copiedBibtex, setCopiedBibtex] = useState(false);
   const [selectedHighlight, setSelectedHighlight] = useState<number | null>(null);
-
-  const bibtexCode = `@article{pathan2026_4imc,
-  title   = {Iterative Indirect Immunofluorescence Imaging (4i) of Mitotic Chromosomes: Quantitative Morphometry and Optimal Transport Modeling},
-  author  = {Pathan, Naqib Sad and Collaborators},
-  journal = {In Preparation},
-  year    = {2026},
-  institution = {University of Virginia},
-  url     = {https://naqibUVa.github.io/4iMC-website/}
-}`;
-
-  const copyBibtex = () => {
-    navigator.clipboard.writeText(bibtexCode);
-    setCopiedBibtex(true);
-    setTimeout(() => setCopiedBibtex(false), 2200);
-  };
 
   const highlightIcons = [
     <Layers key="1" className="w-6 h-6 text-cyan-400" />,
@@ -87,7 +69,7 @@ export default function HomePage() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--accent-primary)]"></span>
             </span>
             <span className="tracking-wide">
-              {PROJECT_INFO.institution} • Computational Biology & Spatial Omics
+              {PROJECT_INFO.department} • {PROJECT_INFO.institution}
             </span>
           </div>
 
@@ -333,80 +315,6 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--accent-glow)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================
-          6. PUBLICATIONS SECTION
-          ======================================================== */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <div className="text-center space-y-3 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold theme-badge">
-            <BookOpen className="w-3.5 h-3.5" />
-            <span>Academic Dissemination</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
-            Publications & Preprints
-          </h2>
-          <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-2xl mx-auto">
-            Peer-reviewed papers, conference proceedings, and open computational benchmarks.
-          </p>
-        </div>
-
-        {/* Primary Manuscript Card */}
-        <div className="theme-card rounded-2xl p-7 sm:p-9 shadow-lg relative overflow-hidden border-2">
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
-            <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[var(--badge-bg)] text-[var(--badge-text)] border border-[var(--badge-border)]">
-              Manuscript in Preparation
-            </span>
-            <span className="text-xs font-mono text-[var(--text-muted)]">
-              Target: 2026
-            </span>
-          </div>
-
-          <h3 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-3 leading-snug">
-            Iterative Indirect Immunofluorescence Imaging (4i) of Mitotic Chromosomes: Quantitative Morphometry and Optimal Transport Modeling
-          </h3>
-
-          <p className="text-xs sm:text-sm font-medium text-[var(--accent-primary)] mb-4">
-            Naqib Sad Pathan, et al. • Department of Biomedical Engineering, University of Virginia
-          </p>
-
-          <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
-            We introduce an end-to-end experimental and computational framework combining 4i multi-round
-            immunofluorescence with optimal transport to quantify mitotic chromosome condensation and
-            spatially resolve CPC signaling dynamics across human and cancer karyotypes.
-          </p>
-
-          {/* Action Row */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-[var(--border-color)]">
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold text-[var(--text-muted)]">
-                Status:
-              </span>
-              <span className="text-xs font-bold text-amber-500 flex items-center gap-1">
-                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                Publications Coming Soon
-              </span>
-            </div>
-
-            <button
-              onClick={copyBibtex}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium border border-[var(--border-color)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] text-[var(--text-primary)] transition-all shadow-xs"
-            >
-              {copiedBibtex ? (
-                <>
-                  <Check className="w-3.5 h-3.5 text-emerald-500" />
-                  <span className="text-emerald-500 font-semibold">BibTeX Copied!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-3.5 h-3.5 text-[var(--text-muted)]" />
-                  <span>Copy BibTeX Citation</span>
-                </>
-              )}
-            </button>
           </div>
         </div>
       </section>
