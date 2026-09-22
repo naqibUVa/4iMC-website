@@ -119,7 +119,7 @@ export default function HomePage() {
           <div className="pt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-[var(--text-muted)] font-mono border-t border-[var(--border-color)]/60 max-w-2xl mx-auto">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-              <span>24+ Multiplex Channels</span>
+              <span>10+ Multiplex Channels</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>

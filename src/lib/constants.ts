@@ -125,25 +125,25 @@ export const TECHNOLOGIES = [
 export const STATISTICS = [
   {
     label: "Imaging Channels",
-    value: 24,
+    value: 10,
     suffix: "+",
     description: "Iteratively probed fluorophores per chromosome",
   },
   {
     label: "Cell Lines",
-    value: 8,
-    suffix: "+",
-    description: "Human & model mitotic lines investigated",
+    value: 2,
+    suffix: "",
+    description: "Mitotic cell lines investigated",
   },
   {
     label: "Chromosomes Analyzed",
-    value: 15400,
+    value: 1500,
     suffix: "+",
     description: "High-resolution segmented instances",
   },
   {
     label: "Computational Pipelines",
-    value: 6,
+    value: 2,
     suffix: "",
     description: "Validated registration and transport modules",
   },
