@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --theme-name: "light-academic";
+    --bg-canvas: #ffffff;
+    --bg-subtle: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-hover: #f1f5f9;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --border-focus: #003366;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --accent-primary: #003366;       /* Duke Blue */
+    --accent-secondary: #1d4ed8;     /* Royal Sapphire */
+    --accent-tertiary: #0284c7;      /* Vivid Sky */
+    --accent-glow: rgba(0, 51, 102, 0.15);
+    --badge-bg: #eff6ff;
+    --badge-text: #1d4ed8;
+    --badge-border: #bfdbfe;
+    --navbar-bg: rgba(255, 255, 255, 0.85);
+    --footer-bg: #f8fafc;
+    --canvas-particle-1: #003366;
+    --canvas-particle-2: #1d4ed8;
+    --canvas-particle-3: #0284c7;
+  }
+
+  [data-theme="dark-scientific"] {
+    --theme-name: "dark-scientific";
+    --bg-canvas: #090d16;
+    --bg-subtle: #0f172a;
+    --bg-surface: #111827;
+    --bg-surface-hover: #1e293b;
+    --bg-card: rgba(17, 24, 39, 0.8);
+    --border-color: #1e293b;
+    --border-focus: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --accent-primary: #38bdf8;       /* Electric Sky */
+    --accent-secondary: #06b6d4;     /* Deep Cyan */
+    --accent-tertiary: #60a5fa;      /* Observatory Blue */
+    --accent-glow: rgba(56, 189, 248, 0.25);
+    --badge-bg: rgba(56, 189, 248, 0.12);
+    --badge-text: #7dd3fc;
+    --badge-border: rgba(56, 189, 248, 0.3);
+    --navbar-bg: rgba(9, 13, 22, 0.85);
+    --footer-bg: #070a12;
+    --canvas-particle-1: #38bdf8;
+    --canvas-particle-2: #06b6d4;
+    --canvas-particle-3: #818cf8;
+  }
+
+  [data-theme="multiplex-imaging"] {
+    --theme-name: "multiplex-imaging";
+    --bg-canvas: #06070d;
+    --bg-subtle: #0c0e1a;
+    --bg-surface: #101426;
+    --bg-surface-hover: #171d36;
+    --bg-card: rgba(16, 20, 38, 0.75);
+    --border-color: rgba(168, 85, 247, 0.22);
+    --border-focus: #c084fc;
+    --text-primary: #fdf4ff;
+    --text-secondary: #e2e8f0;
+    --text-muted: #a1a1aa;
+    --accent-primary: #c084fc;       /* Fluorophore Purple */
+    --accent-secondary: #22d3ee;     /* Fluorophore Cyan */
+    --accent-tertiary: #f43f5e;      /* Fluorophore Magenta */
+    --accent-quaternary: #10b981;    /* Fluorophore Green */
+    --accent-glow: rgba(192, 132, 252, 0.3);
+    --badge-bg: rgba(192, 132, 252, 0.12);
+    --badge-text: #f0abfc;
+    --badge-border: rgba(244, 63, 94, 0.3);
+    --navbar-bg: rgba(6, 7, 13, 0.85);
+    --footer-bg: #040509;
+    --canvas-particle-1: #22d3ee;    /* Cyan */
+    --canvas-particle-2: #f43f5e;    /* Magenta */
+    --canvas-particle-3: #c084fc;    /* Purple */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Custom theme helper classes */
+.theme-canvas {
+  background-color: var(--bg-canvas);
+}
+
+.theme-subtle {
+  background-color: var(--bg-subtle);
+}
+
+.theme-surface {
+  background-color: var(--bg-surface);
+}
+
+.theme-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.theme-card:hover {
+  border-color: var(--border-focus);
+}
+
+.theme-border {
+  border-color: var(--border-color);
+}
+
+.theme-text-primary {
+  color: var(--text-primary);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+}
+
+.theme-accent {
+  color: var(--accent-primary);
+}
+
+.theme-badge {
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--badge-border);
+}
+
+.theme-navbar {
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.theme-footer {
+  background-color: var(--footer-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Multiplex special glow effect */
+[data-theme="multiplex-imaging"] .multiplex-glow {
+  box-shadow: 0 0 25px -5px rgba(34, 211, 238, 0.25), 0 0 15px -3px rgba(244, 63, 94, 0.2);
+}
+
+[data-theme="dark-scientific"] .scientific-glow {
+  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.25);
+}
+
+/* Scientific Grid Texture */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, var(--border-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
+  opacity: 0.35;
+}
+
+/* Glassmorphic Panel */
+.glass-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Interactive Chromosome Gradient */
+.text-gradient-chromosome {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 50%, var(--accent-tertiary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
