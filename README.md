@@ -9,6 +9,14 @@ An academic research project website showcasing high-dimensional spatial biology
 
 ---
 
+### 🌐 Quick Links & Access
+
+- 🚀 **Official Live Website**: [https://naqibUVa.github.io/4iMC-website/](https://naqibUVa.github.io/4iMC-website/)
+- 📦 **GitHub Repository**: [https://github.com/naqibUVa/4iMC-website](https://github.com/naqibUVa/4iMC-website)
+- 💻 **Local Dev Server**: [http://localhost:3000](http://localhost:3000) (when running `npm run dev`)
+
+---
+
 ## 🔬 Project Overview
 
 This project investigates how chromosome passenger complex (CPC) signaling and chromosome condensation are coordinated during mitosis using high-dimensional multiplex imaging. We develop optimal transport-based methods to quantify, visualize, and compare chromosome-scale variation across cell lines, enabling the study of how chromosome geometry influences protein localization and chromosomal organization.
